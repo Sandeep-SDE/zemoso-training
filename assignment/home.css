@@ -1,0 +1,86 @@
+.mypic {
+    height: 50%;
+    width: 50%;
+}
+
+#aboutme{
+    font-size: 40px;
+}
+
+.headersection {
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+
+.headersection p {
+    font-size: 28px;
+    font-family: Georgia;
+}
+
+.share {
+    background-color: aqua;
+    border: 1px solid LightGrey;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+
+.share a {
+    border-radius: 3px;
+    color: blueviolet;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.share a:hover {
+    background: white;
+    border: 1px solid lightblue;
+    color: green;
+}
+
+div p {
+    font-family: serif, sans-serif;
+    font-size: x-large;
+    padding: 10%;
+}
+
+#one{
+    background-image: url(.//images/vjit.png);
+    background-size: 100% 100%;
+}
+
+#two{
+    background-image: url(.//images/gowthami.png);
+    background-size: 100% 100%;
+}
+
+#three{
+    background-image: url(.//images/school.png);
+    background-size: 100% 100%;
+}
+
+#crm{
+    background-image: url(./images/crm.png);
+    background-size: 100% 100%;
+}
+
+#api{
+    background-image: url(./images/apis.png);
+    background-size: 100% 100%;
+}
+
+#e-com{
+    background-image: url(./images/ecommerce.png);
+    background-size: 100% 100%;
+}
+
+.content{
+    background-color: white;
+    color: black;
+    margin: 100px 100px;
+    font-size: 30px;
+}
