@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>The Document Object Model Manipulation</h1>
+  <h2>The removeChild() && addList() Method</h2>
+
+  <p id="demo">Click "Remove" to remove the first child (index 0)</p>
+  <button onclick="child()">Remove</button>
+
+  <ul id="myList">
+    <li>Sandeep</li>
+    <li>Sandy</li>
+    <li>Maxy</li>
+  </ul>
+  <input type="text" id="inputdata" />
+  <button onclick="addChild()">Add List</button>
+  <ol id="addlist">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+  </ol>
+
+  <script>
+    const data = document.getElementById("demo");
+    
+    function child() {
+      const list = document.getElementById("myList");
+      if (list.hasChildNodes()) {
+        list.removeChild(list.children[0]);
+      }
+    }
+
+    function addChild() {
+      const data = document.getElementById("inputdata").value;
+      const list = document.getElementById("addlist");
+      //const node = document.getElementById("myList").lastElementChild;
+      const addedEle = document.createElement("li");
+      data.innerText = data;
+      list.appendChild(addedEle);
+      console.log(list.innerHTML);
+    }
+  </script>
+
+</body>
+
+</html>
