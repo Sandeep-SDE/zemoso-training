@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Storage Assignment</title>
+    <link href="./storageAssignment.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <input type="text" name="cookie" id="inputCookie" placeholder="Enter the text">
+            <button onclick="setCookie()">create</button>
+            <div id="get-cookie"></div>
+            <button onclick="getCookie()">getcookie</button>
+        </div>
+        <div class="box">
+            <input type="text" name="cookie" id="inputSession" placeholder="Enter the text">
+            <button onclick="setSession()">create</button>
+            <div id="get-session"></div>
+            <button onclick="getSession()">getsession</button>
+        </div>
+        <div class="box">
+            <input type="text" name="cookie" id="inputData" placeholder="Enter the text">
+            <button onclick="setLocalStore()">create</button>
+            <div id="get-data"></div>
+            <button onclick="getLocalData()">getdata</button>
+        </div>
+    </div>
+    <script src="./storageAssignment.js"></script>
+</body>
+
+</html>

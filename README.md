@@ -1,1 +1,0 @@
-# zemoso-training

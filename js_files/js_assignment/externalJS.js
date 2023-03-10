@@ -124,10 +124,10 @@ inputTable.addEventListener("input", (e) => {
     //console.log(filter);
     const renderTables = filter.map((table, index) => {
         return `
-    <div class="table-data" key=${index} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    <h1 id="num${index}">${table.num}</h1>
-    <p id="price${index}">Rs: ${table.amount} | Total items: ${table.numItems}</p>
-    </div>
+        <div class="table-data" key=${index} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <h1 id="num${index}">${table.num}</h1>
+        <p id="price${index}">Rs: ${table.amount} | Total items: ${table.numItems}</p>
+        </div>
     `
     });
     tables.innerHTML = renderTables;
@@ -144,7 +144,7 @@ const renderTables = dataTables.map((table, index) => {
 });
 tables.innerHTML = renderTables;
 
-function showPopup(e){
+function showPopup(e) {
     console.log(e);
 }
 
@@ -160,23 +160,64 @@ const products = document.querySelectorAll(".menu-data");
 /**
  * POPUP box when click on table
  */
-tableNums.forEach(table=>{
-    table.addEventListener("click",(e)=>{
+// const closeIcon = document.getElementById("closeIcon");
+// closeIcon.addEventListener("click", (e) => {
+//     const ftableData = document.getElementById("tfooter");
+//     ftableData.removeChild(ftableData.children[0]);
+// });
+// function showData(){
+//     const tableData = document.getElementById("table");
+//     console.log(tableData.innerHTML);
+// }
+let flag = true;
+tableNums.forEach(table => {
+    table.addEventListener("click", (e) => {
+        e.preventDefault()
+        if(flag){
         const tId = e.target.getAttribute("key");
-        const list = document.getElementById("addlist");
+        const table = document.getElementById("table");
+        //console.log(table);
         const data = dataTables[tId];
         const orders = data["orders"];
+        console.log(orders);
         //console.log(data)
-        orders.forEach(item=>{
-            const ele = document.createElement("li");
-            ele.innerText = `Item: ${item["name"]}; Price: ${item["price"]}`;
-            list.appendChild(ele);
+        let counter = 0
+        orders.forEach(item => {
+            const row = document.createElement("tr");
+            const cell1 = document.createElement("td");
+            const cell2 = document.createElement("td");
+            const cell3 = document.createElement("td");
+            const cell4 = document.createElement("td");
+            const inputEle = document.createElement("INPUT");
+            inputEle.setAttribute("type", "number");
+            inputEle.setAttribute("min", 1);
+            inputEle.setAttribute("max", 10);
+            inputEle.setAttribute("value", 1);
+            cell4.appendChild(inputEle);
+            counter++;
+            cell1.innerText = counter;
+            cell2.innerText = item["name"];
+            cell3.innerText = item["price"];
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+            row.appendChild(cell3);
+            row.appendChild(cell4);
+            table.appendChild(row);
+            flag = false;
         });
-        const ele = document.createElement("li");
-        ele.innerText = `BillAmount: ${data["amount"]}; TotalItems: ${data["numItems"]}`;
-        list.appendChild(ele);
+        const fTable = document.getElementById("tfooter")
+        const frow = document.createElement("tr");
+        const fcell1 = document.createElement("th");
+        fcell1.innerText = `BillAmount: ${data["amount"]}`
+        const fcell2 = document.createElement("th");
+        fcell2.innerText = `TotalItems: ${data["numItems"]}`
+        //console.log(fcell1,fcell2)
+        frow.appendChild(fcell1);
+        frow.appendChild(fcell2);
+        fTable.appendChild(frow);
+    }
     });
-})
+});
 
 //console.log(tableNums, products);
 
@@ -235,22 +276,28 @@ tableNums.forEach(table => {
         const addItem = dataItems[itemId];
         const tableId = e.target.getAttribute("key");
         const addIn = dataTables[tableId];
-        addIn["orders"].push(addItem);
-        let totalPrice = 0;
+        let bool = false;
         addIn.orders.forEach(item => {
-            totalPrice += item["price"]
+            if (item["name"] === addItem["name"]) {
+                bool = true;
+            }
         });
-        addIn.amount = totalPrice;
-        addIn.numItems = addIn.orders.length;
-        const ele = `<p id="test">this mine</p>`;
-        //console.log(ele);
+        if (!bool) {
+            addIn["orders"].push(addItem);
+            let totalPrice = 0;
+            addIn.orders.forEach(item => {
+                totalPrice += item["price"]
+            });
+            addIn.amount = totalPrice;
+            addIn.numItems = addIn.orders.length;
+        }else{
+            addIn.amount+= addItem["price"];
+        }
         document.querySelector(`.table-data #num${tableId}`).innerHTML = `${addIn["num"]}`;
         document.querySelector(`.table-data #price${tableId}`).innerHTML = `Rs: ${addIn.amount} | TotalItems: ${addIn.numItems}`;
         //console.log(document.getElementById("test"))
         //console.log(document.getElementsByClassName("table-data")[0]);
-
-
-       // console.log(e.target)
+        // console.log(e.target)
     });
 });
 
