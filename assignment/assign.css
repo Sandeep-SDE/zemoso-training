@@ -1,0 +1,18 @@
+
+body {
+    background-image: url("./images/img.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.welcome{
+    text-align: center;
+    margin: 20%;
+    font-size: 50px;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
