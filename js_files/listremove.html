@@ -26,6 +26,7 @@
     
     function child() {
       const list = document.getElementById("myList");
+      console.log(list)
       if (list.hasChildNodes()) {
         list.removeChild(list.children[0]);
       }

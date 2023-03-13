@@ -40,20 +40,24 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">Order list</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeIcon"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            id="closeIcon"></button>
                     </div>
                     <div id="modal-body">
                         <table style="width: 100%; margin-left: 15px;" id="table">
-                            <tr>
+                            <thead>
                                 <th>sl.No</th>
                                 <th>Item Name</th>
                                 <th>Price</th>
-                            </tr>
+                            </thead>
                         </table>
                     </div>
                     <div class="modal-footer">
                         <table style="width: 100%;" id="tfooter">
-                            
+                            <tr id="frow">
+                                <th id="fHeadCell1"></th>
+                                <th id="fHeadCell2"></th>
+                            </tr>
                         </table>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Generate bill</button>
