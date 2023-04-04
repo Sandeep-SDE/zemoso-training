@@ -12,6 +12,7 @@ export async function getCall(){
     return resData;
 }
 
+
 // export async function postCall(){
 //     const resData = await axios.post(`${URL}/post-test`).then((res:any)=>{
 //         return res.data;

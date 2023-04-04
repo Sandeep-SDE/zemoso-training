@@ -2,7 +2,7 @@
 //import "./CheckBox.css";
 import Checkbox from '@mui/material/Checkbox';
 // import { checkTheme } from "./MyTheme";
-import { myTheme } from './MyTheme';
+import { myTheme } from '../MyTheme';
 import { ThemeProvider } from "@emotion/react";
 import { FormLabel } from '@mui/material';
 

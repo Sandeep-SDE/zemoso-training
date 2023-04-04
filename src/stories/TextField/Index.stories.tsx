@@ -1,6 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import InputField from "./TextField";
+import InputField from "./Index";
 
 export default {
     title: "atoms/InputField",

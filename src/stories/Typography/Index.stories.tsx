@@ -1,6 +1,6 @@
 
 import { Story , Meta } from "@storybook/react";
-import CustTypography from "./Typography";
+import CustTypography from "./Index";
 
 export default {
     title: "atoms/Custum-Typography",

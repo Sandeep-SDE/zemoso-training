@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@emotion/react";
 import {Typography} from "@mui/material";
 // import { CustTypoTheme } from "./MyTheme";
-import { CustTypoTheme } from "./MyTheme";
+import { CustTypoTheme } from "../MyTheme";
 
 interface PropsTypes{
     label?: string;

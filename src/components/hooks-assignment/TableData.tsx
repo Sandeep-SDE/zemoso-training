@@ -7,7 +7,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { grey } from "@mui/material/colors";
 import { ThemeProvider } from '@emotion/react';
-import "./TableData.css";
 //import { TableSet } from './data';
 import { getCall } from '../../axiosAPI/mock-server-APIs';
 //kimport { styled } from '@mui/material/styles';

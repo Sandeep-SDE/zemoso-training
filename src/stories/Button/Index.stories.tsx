@@ -4,7 +4,7 @@ import React from 'react';
 
 import { Story, Meta } from '@storybook/react';
 
-import Button  from './Button';
+import Button  from './Index';
 
 export default {
   title: 'atoms/Button',

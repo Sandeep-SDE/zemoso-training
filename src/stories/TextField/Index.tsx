@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react';
 import TextField from '@mui/material/TextField';
 //import { TextFieldTheme } from './MyTheme';
-import { myTheme } from './MyTheme';
+import { myTheme } from '../MyTheme';
 
 interface propsTypes {
     variate?:"standard" | "filled" | "outlined" ;

@@ -1,14 +1,14 @@
 import React from "react";
 //import "./Button.css";
 import Button from '@mui/material/Button';
-import { myTheme } from "./MyTheme";
+import { myTheme } from "../MyTheme";
 import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
 
 interface propTypes {
     backgroundColor?: string;
     label?: string;
-    color?: "inherit" | "success" | "error" | "warning" | "primary" | "secondary" | "info" ;
+    color?: "inherit" | "success" | "error" | "warning" | "primary" | "secondary" | "info";
     size?: "small" | "medium" | "large";
     onClick?: (() => "void");
     variant?: "text" | "outlined" | "contained";
@@ -35,20 +35,20 @@ interface propTypes {
 //     );
 // }
 
-const Butn = styled(Button)<{
-    color ?: "inherit" | "success" | "error" | "warning" | "primary" | "secondary" | "info",
-    backgroundColor?: string,
-    // '&:hover' : {
-    //     bgcolor: 'primary400.main'
-    // }
-}>(({color, backgroundColor})=>({
-    color: color,
-    backgroundColor: backgroundColor
-}))
+// const Butn = styled(Button)<{
+//     color ?: "inherit" | "success" | "error" | "warning" | "primary" | "secondary" | "info",
+//     backgroundColor?: string,
+//     // '&:hover' : {
+//     //     bgcolor: 'primary400.main'
+//     // }
+// }>(({color, backgroundColor})=>({
+//     color: color,
+//     backgroundColor: backgroundColor
+// }))
 
 export default function CustButton(props: propTypes) {
 
-    
+
 
     return (
         // <ThemeProvider theme={myTheme}>
@@ -68,13 +68,20 @@ export default function CustButton(props: propTypes) {
         //     </Button>
         // </ThemeProvider>
         <ThemeProvider theme={myTheme}>
-            <Butn 
+            <Button
+                sx={{
+                    color: props.color,
+                    backgroundColor: props.backgroundColor,
+                    '&:hover' : {
+                        bgcolor: 'primary400.main'
+                    }
+                }}
                 size={props.size}
                 variant={props.variant}
                 onClick={props.onClick}
             >
                 {props.label}
-            </Butn>
+            </Button>
         </ThemeProvider>
     );
 }

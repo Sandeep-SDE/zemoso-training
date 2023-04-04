@@ -1,9 +1,9 @@
 
 
 import { Meta, Story } from "@storybook/react";
-import Icon from "./Icon"
-import logo from "./assestes/Logo.png";
-import logo1 from "./assestes/Logo1.png";
+import Icon from "./Index";
+import logo from "../assestes/Logo.png";
+import logo1 from "../assestes/Logo1.png";
 
 export default {
     title: "atoms/Icon",

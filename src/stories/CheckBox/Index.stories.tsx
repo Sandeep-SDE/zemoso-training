@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import CheckBox from "./CheckBox";
+import CheckBox from "./Index";
 
 export default{
     title: "atoms/Checkbox",
