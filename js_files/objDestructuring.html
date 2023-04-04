@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>JavaScript Object Destructuring</title>
+</head>
+<body style="text-align: center ;">
+   <p>JavaScript Object Destructuring</p>
+   <p id="obj-dest"></p>
+   <script>
+      const employee = {
+         'name': 'Rajesh',
+         'company': 'Tutorials Point',
+         'employee-id': 102
+      }
+      const output1 = employee.company; // Without Object Destructuring
+      const {company} = employee;
+      const output2 = company; // WIth Object Destructuring
+      document.getElementById('obj-dest').innerHTML = "Without Object Destructuring "+ '<br/>' + " Employee working company : "+output1+"<br/>"+"<br/>"+"With Object Destructuring "+ '<br/>' + " Employee working company : "+output2;
+   </script>
+</body>
+</html>
