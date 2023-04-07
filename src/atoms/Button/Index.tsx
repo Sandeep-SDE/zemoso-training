@@ -3,7 +3,6 @@ import React from "react";
 import Button from '@mui/material/Button';
 import { myTheme } from "../MyTheme";
 import { ThemeProvider } from "@emotion/react";
-import styled from "@emotion/styled";
 
 interface propTypes {
     backgroundColor?: string;
@@ -46,7 +45,7 @@ interface propTypes {
 //     backgroundColor: backgroundColor
 // }))
 
-export default function CustButton(props: propTypes) {
+export default function CustomButton(props: propTypes) {
 
 
 
@@ -79,8 +78,11 @@ export default function CustButton(props: propTypes) {
                 size={props.size}
                 variant={props.variant}
                 onClick={props.onClick}
+                data-testId = "mui-button"
+                className="mui-button"
+                type= "submit"
             >
-                {props.label}
+                Button
             </Button>
         </ThemeProvider>
     );

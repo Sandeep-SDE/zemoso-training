@@ -1,15 +1,14 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-// import CustButton from './stories/Button';
 import App from './App';
 
-test('test the button have backgroundColor red', () => {
+test('button should have backgroundColor red', () => {
   render(<App/>);
   const colorButton = screen.getByRole('button', {name: 'change to blue'});
   expect(colorButton).toHaveStyle({backgroundColor: 'red'});
 });
 
-test('test the button when click it', ()=>{
+test('onclick button color should change', ()=>{
   render(<App/>);
   const colorButton = screen.getByRole('button', {name: 'change to blue'});
   expect(colorButton).toHaveStyle({backgroundColor: 'red'});

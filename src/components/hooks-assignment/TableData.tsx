@@ -7,9 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { grey } from "@mui/material/colors";
 import { ThemeProvider } from '@emotion/react';
-//import { TableSet } from './data';
-import { getCall } from '../../axiosAPI/mock-server-APIs';
-//kimport { styled } from '@mui/material/styles';
+import { getServerData } from '../../axiosAPI/mock-server-APIs';
 
 const tHeader = ["NAME", "ADJUDICATION", "STATUS", "LOCATION", "DATE"];
 
@@ -17,12 +15,10 @@ export default function TableData() {
     const [target, setTarget] = React.useState("");
     const [getData, setGetData] = React.useState<[any]>([{}]);
 
-    // const StyledRow = styled(TableRow)(({ theme }) => ({
-    //       backgroundColor: theme.palette.action.hover
-    //   }));
+    
 
     React.useEffect(()=>{
-        getCall().then(data=> setGetData(data));
+        getServerData().then(data=> setGetData(data));
     },[]);
     console.log(getData);
     const onClickHandler = (e:any)=>{

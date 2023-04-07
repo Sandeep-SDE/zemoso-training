@@ -12,13 +12,10 @@ interface PropsTypes{
     color?: "primary"| "secondary";
 }
 
-export default function CustTypography(props:PropsTypes){
+export default function CustomTypography(props:PropsTypes){
     return (
         <ThemeProvider theme={CustTypoTheme}>
-        <Typography align={props.align} 
-        variant={props.variate} 
-        gutterBottom={props.gutterButton} 
-        paragraph={props.paragraph}
+        <Typography 
         sx={{
             '&:hover':{
                 color: 'primary.main'
@@ -26,6 +23,11 @@ export default function CustTypography(props:PropsTypes){
             width: "72px",
             height: "30px"
         }}
+        align={props.align} 
+        variant={props.variate} 
+        gutterBottom={props.gutterButton} 
+        paragraph={props.paragraph}
+        data-testId = "mui-typography"
         >{props.label}</Typography>
         </ThemeProvider>
     );

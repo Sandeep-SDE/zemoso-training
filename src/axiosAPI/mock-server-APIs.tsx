@@ -3,7 +3,7 @@ import axios from "axios";
 //const URL = "https://dff0a85c-762e-450b-a8c1-f54e52ff6df1.mock.pstmn.io";
 const URL = "http://localhost:3000"
 
-export async function getCall(){
+export async function getServerData(){
     const resData = await axios.get(`${URL}/user`).then((res:any)=>{
         return res.data;
     }).catch((err:any)=>{

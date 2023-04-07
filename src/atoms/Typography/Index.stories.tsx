@@ -1,10 +1,10 @@
 
 import { Story , Meta } from "@storybook/react";
-import CustTypography from "./Index";
+import CustomTypography from "./Index";
 
 export default {
     title: "atoms/Custum-Typography",
-    component: CustTypography,
+    component: CustomTypography,
     argTypes: {
         variate: {
             type: 'select',
@@ -30,9 +30,9 @@ export default {
             }
         }
     }
-} as Meta<typeof CustTypography>;
+} as Meta<typeof CustomTypography>;
 
-const Template: Story<typeof CustTypography> = (args)=> <CustTypography {...args}/>;
+const Template: Story<typeof CustomTypography> = (args)=> <CustomTypography {...args}/>;
 
 export const FieldStory = Template.bind({});
 FieldStory.args = {variate: "h1",gutterButton:true , label:"sandeep",paragraph: false, color: "primary"};

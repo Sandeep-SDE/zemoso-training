@@ -41,16 +41,11 @@ export default function CheckBox(props: propsTypes) {
             <Checkbox
                 defaultChecked
                 sx={{
-                    // '&.Mui-checked': {
-                    //     color: green[600],
-                    // },
-                    // '$:hover':{
-                    //     color : 'primary.dark'
-                    // }
                     color: 'primery500.main'
+
                 }}
+                data-testId = "mui-checkbox"
                 size={props.size}
-                //color= 'primary'
             />
             <FormLabel>
                 {props.label}

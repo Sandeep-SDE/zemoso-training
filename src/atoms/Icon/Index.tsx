@@ -9,7 +9,7 @@ interface PropsTypes {
 export default function Icon(props: PropsTypes){
     return (
         <>
-            <img src={props.src} alt={props.alt} width={props.width} height={props.height}/>
+            <img src={props.src} alt={props.alt} width="16px" height="16px"/>
         </>
     )
 }

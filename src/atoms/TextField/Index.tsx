@@ -47,6 +47,8 @@ export default function InputField(props:propsTypes){
             borderRadius: '4px',
             gap: '10px'
          }}
+         data-testId= "mui-textfield"
+         placeholder= "enter your query here"
          />
         </ThemeProvider>
         </>
