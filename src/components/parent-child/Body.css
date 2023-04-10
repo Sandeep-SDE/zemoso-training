@@ -1,0 +1,19 @@
+
+.form-container{
+  width: 500px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  margin-left: 500px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 5px solid rgb(88, 88, 177);
+  background: tan;
+}
+
+h3{
+  text-align: center;
+}
+
+.expense-container{
+  background-color: rgb(71, 68, 68);
+} 
